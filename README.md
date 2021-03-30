@@ -87,7 +87,23 @@ Usage
  Service
 -----
  - Copy the script wherever you want (for exemple /opt/onkyo2mqtt.py).
- - Create 
+ - Create the file /etc/systemd/system/onkyo2mqtt.service with content :
+	[Unit]
+	Description=Onkyo2mqtt Sevice
+	After=multi-user.target
+	[Service]
+	Type=simple
+	Restart=always
+	ExecStart=/usr/bin/python3 /opt/onkyo2mqtt.py --mqtt-host 192.168.1.42 --log DEBUG
+	[Install]
+	WantedBy=multi-user.target
+
+Change 192.168.1.42 with your MQTT broker IP (in this example, we will be in auto discover Onkyo mode)
+  - sudo systemctl daemon-reload
+  - sudo systemctl enable onkyo2mqtt
+  - sudo systemctl start onkyo2mqtt
+ 
+
  
 Changelog
 ---------
