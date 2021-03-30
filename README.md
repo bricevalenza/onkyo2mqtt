@@ -83,9 +83,19 @@ Usage
 						Device identifier of AVR to connecct to. Uses autodiscover
     --log LOG           set log level to the specified value. Defaults to
                         WARNING. Try DEBUG for maximum detail                        
-                        
+ 
+ Service
+-----
+ - Copy the script wherever you want (for exemple /opt/onkyo2mqtt.py).
+ - Create 
+ 
 Changelog
 ---------
+* 0.8 - 2021/03/30 - Brice VALENZA
+  - Fix Mqtt v5 change
+  - add service on README
+
+
 * 0.7 - 2016/06/05 - owagner
   - support --onkyo-id
 
