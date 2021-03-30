@@ -5,6 +5,9 @@ onkyo2mqtt
   
   Provided under the terms of the MIT license.
 
+Update by Brice VALENZA (2021).
+ Only the command via the use of "/set" has been tested
+
 Overview
 --------
 Bridge between the Onkyo AVR EISCP remote control protocol and MQTT.
